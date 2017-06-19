@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BPNFE.MVC")]
+[assembly: AssemblyTitle("MVC")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BPNFE.MVC")]
+[assembly: AssemblyProduct("MVC")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6ba37729-3d8c-4082-9e49-a140e76f4aea")]
+[assembly: Guid("d980f7a7-6eb1-4bfc-9ec0-e16515d916c1")]
 
 // Version information for an assembly consists of the following four values:
 //

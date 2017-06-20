@@ -37,6 +37,9 @@
     <Compile Include="Interfaces\Repositorios\IClienteRepositorio.cs" />
     <Compile Include="Interfaces\Repositorios\IProdutoRepositorio.cs" />
     <Compile Include="Interfaces\Repositorios\IRepositorioBase.cs" />
+    <Compile Include="Interfaces\Servicos\IClienteService.cs" />
+    <Compile Include="Interfaces\Servicos\IProdutoService.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

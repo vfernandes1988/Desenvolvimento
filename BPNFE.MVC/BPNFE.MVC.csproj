@@ -140,22 +140,39 @@
     <Compile Include="ViewModels\ProdutoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\c3.min.css" />
+    <Content Include="Content\css\components.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\new_dashboard.css" />
+    <Content Include="Content\css\switchery.min.css" />
+    <Content Include="Content\css\toastr.min.css" />
+    <Content Include="Content\img\loader.gif" />
+    <Content Include="Content\img\logo1.ico" />
+    <Content Include="Content\js\c3.min.js" />
+    <Content Include="Content\js\components.js" />
+    <Content Include="Content\js\countUp.min.js" />
+    <Content Include="Content\js\custom.js" />
+    <Content Include="Content\js\d3.min.js" />
+    <Content Include="Content\js\jquery.flot.categories.js" />
+    <Content Include="Content\js\jquery.flot.js" />
+    <Content Include="Content\js\jquery.flot.pie.js" />
+    <Content Include="Content\js\jquery.flot.resize.js" />
+    <Content Include="Content\js\jquery.flot.spline.min.js" />
+    <Content Include="Content\js\jquery.flot.stack.js" />
+    <Content Include="Content\js\jquery.flot.time.js" />
+    <Content Include="Content\js\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\js\newsTicker.js" />
+    <Content Include="Content\js\new_dashboard.js" />
+    <Content Include="Content\js\raphael-min.js" />
+    <Content Include="Content\js\switchery.min.js" />
+    <Content Include="Content\js\toastr.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -186,15 +203,15 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Clientes\Index.cshtml" />
     <Content Include="Views\Clientes\Create.cshtml" />
+    <Content Include="Views\Shared\_LayoutInternas.cshtml" />
+    <Content Include="Views\Clientes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>

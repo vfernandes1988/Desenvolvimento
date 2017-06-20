@@ -2,7 +2,7 @@
 
 namespace BPNFE.Dominio.Interfaces.Repositorios
 {
-    public interface ClienteRepositorio : IRepositorioBase<Cliente>
+    public interface IClienteRepositorio : IRepositorioBase<Cliente>
     {
     }
 }

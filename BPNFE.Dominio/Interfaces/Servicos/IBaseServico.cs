@@ -4,11 +4,11 @@ namespace BPNFE.Dominio.Interfaces.Servicos
 {
     public interface IBaseServico<TEntity> where TEntity : class
     {
-        void Add(TEntity obj);
-        TEntity GetById(int id);
-        IEnumerable<TEntity> GetAll();
-        void Update(TEntity obj);
-        void Remove(TEntity obj);
+        void Inserir(TEntity obj);
+        TEntity BuscarId(int id);
+        IEnumerable<TEntity> BuscarTodos();
+        void Atualizar(TEntity obj);
+        void Remover(TEntity obj);
         void Dispose();
     }
 }

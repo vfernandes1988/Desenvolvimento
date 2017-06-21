@@ -14,11 +14,6 @@ namespace BPNFE.Dominio.Entidades
         public string Email { get; set; }
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
-        public string TipoUsuario { get; set; }
-        //public virtual IEnumerable<Produto> Produtos { get; set; }
-        public bool Administrador(Usuario usuario)
-        {
-            return usuario.Ativo && usuario.TipoUsuario == "Administrador";
-        }
+        public bool Administrador { get; set; }
     }
 }

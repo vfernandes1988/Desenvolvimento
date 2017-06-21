@@ -36,8 +36,8 @@ namespace BPNFE.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(cliente);
-                _clienteRepositorio.Inserir(clienteDomain);
+                var clienteDominio = Mapper.Map<ClienteViewModel, Cliente>(cliente);
+                _clienteRepositorio.Inserir(clienteDominio);
 
                 return RedirectToAction("Index");
             }

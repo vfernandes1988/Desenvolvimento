@@ -10,13 +10,13 @@ namespace BPNFE.MVC.ViewModels
         public int UsuarioId { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Login")]
-        [MaxLength(150, ErrorMessage = "Máximo {0} caracteres")]
+        [MaxLength(15, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
         public string Login { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Senha")]
-        [MaxLength(150, ErrorMessage = "Máximo {0} caracteres")]
-        [MinLength(2, ErrorMessage = "Mínimo {0} caracteres")]
+        [MaxLength(4, ErrorMessage = "Máximo {0} caracteres")]
+        [MinLength(4, ErrorMessage = "Mínimo {0} caracteres")]
         [PasswordPropertyText]
         public string Senha { get; set; }
 
@@ -38,11 +38,6 @@ namespace BPNFE.MVC.ViewModels
         [ScaffoldColumn(false)]
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
-
-        [Required(ErrorMessage = "Preencha o campo TipoUsuario")]
-        [MaxLength(150, ErrorMessage = "Máximo {0} caracteres")]
-        [EmailAddress(ErrorMessage = "Preencha o email válido !")]
-        [DisplayName("E-mail")]
-        public string TipoUsuario { get; set; }
+        public bool Administrador { get; set; }
     }
 }

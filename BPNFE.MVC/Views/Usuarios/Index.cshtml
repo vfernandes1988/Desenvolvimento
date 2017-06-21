@@ -1,22 +1,40 @@
 ﻿@model IEnumerable<BPNFE.MVC.ViewModels.UsuarioViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Usuário(s)";
+    Layout = "~/Views/Shared/_LayoutInternaIndex.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Usuário(s)</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="col-lg-12">
+    <div class="col-lg-4">
+        @Html.ActionLink("Criar Novo Usuário", "Criar")
+    </div>
+    <div class="col-lg-4">
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <a href="javascript:void(0)" class="widget">
+            <div class="widget-content widget-content-mini text-right clearfix">
+                <div class="widget-icon pull-left themed-background-success">
+                    <i class="gi gi-user text-light-op"></i>
+                </div>
+                <h2 class="widget-heading h3 text-success">
+                    <strong>+ <span data-toggle="counter" data-to="2862"></span></strong>
+                </h2>
+                <span class="text-muted">USUÁRIOS</span>
+            </div>
+        </a>
+    </div>
+</div>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Login)
         </th>
-        <th>
+        <!--<th>
             @Html.DisplayNameFor(model => model.Senha)
-        </th>
+        </th>-->
         <th>
             @Html.DisplayNameFor(model => model.Nome)
         </th>
@@ -30,40 +48,63 @@
             @Html.DisplayNameFor(model => model.Ativo)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoUsuario)
+            @Html.DisplayNameFor(model => model.Administrador)
         </th>
-        <th></th>
+        <th>
+            Opções
+        </th>
     </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Login)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Senha)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sobrenome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ativo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TipoUsuario)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UsuarioId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UsuarioId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UsuarioId })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Login)
+            </td>
+            <!--<td>
+                @Html.DisplayFor(modelItem => item.Senha)
+            </td>-->
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobrenome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Administrador)
+            </td>
+            <td>
+                <button type="button" class="btn btn-success">
+                    <a href="@Url.Action("Editar", "Edit")" style="color:white">Editar</a>
+                </button>
+                <button type="button" class="btn btn-warning">
+                    <a href="@Url.Action("Detalhes", "Details")" style="color:white">Detalhes</a>
+                </button>
+                <button type="button" class="btn btn-danger">
+                    <a href="@Url.Action("Excluir", "Delete")" style="color:white">Excluir</a>
+                </button>
+            </td>
+        </tr>
+    }
 </table>
+<!--
+
+<div class="btn-group">
+    <button type="button" class="btn btn-danger"><a href="@Url.Action("Editar", "Edit")"></a></button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</div>-->

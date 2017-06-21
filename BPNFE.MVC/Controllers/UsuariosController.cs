@@ -13,11 +13,11 @@ namespace BPNFE.MVC.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly UsuarioRepositorio _usuarioBaseRepositorio = new UsuarioRepositorio();
+        private readonly UsuarioRepositorio _usuarioRepositorio = new UsuarioRepositorio();
         // GET: Usuarios
         public ActionResult Index()
         {
-            var usuarioViewModel = Mapper.Map<IEnumerable<Usuario>, IEnumerable<UsuarioViewModel>>(_usuarioBaseRepositorio.BuscarTodos());
+            var usuarioViewModel = Mapper.Map<IEnumerable<Usuario>, IEnumerable<UsuarioViewModel>>(_usuarioRepositorio.BuscarTodos());
             return View(usuarioViewModel);
         }
 
@@ -28,25 +28,25 @@ namespace BPNFE.MVC.Controllers
         }
 
         // GET: Usuarios/Create
-        public ActionResult Create()
+        public ActionResult Criar()
         {
             return View();
         }
 
-        // POST: Usuarios/Create
+        // POST: Clientes/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Criar(UsuarioViewModel usuario)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
+                var usuarioDominio = Mapper.Map<UsuarioViewModel, Usuario>(usuario);
+                _usuarioRepositorio.Inserir(usuarioDominio);
 
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(usuario);
         }
 
         // GET: Usuarios/Edit/5

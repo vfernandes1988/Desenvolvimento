@@ -19,4 +19,3 @@ namespace BPNFE.Dominio.Entidades
         }
     }
 }
-

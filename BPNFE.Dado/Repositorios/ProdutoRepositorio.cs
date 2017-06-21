@@ -5,7 +5,7 @@ using BPNFE.Dominio.Interfaces.Repositorios;
 
 namespace BPNFE.Dado.Repositorios
 {
-    public class ProdutoBaseRepositorio : BaseRepositorio<Produto>, IProdutoRepositorio
+    public class ProdutoBaseBaseRepositorio : BaseRepositorio<Produto>, IProdutoBaseRepositorio
     {
         public IEnumerable<Produto> BuscarPorNome(string nome)
         {

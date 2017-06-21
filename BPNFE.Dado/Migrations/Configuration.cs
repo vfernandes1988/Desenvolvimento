@@ -1,15 +1,18 @@
 namespace BPNFE.Dado.Migrations
 {
+    using System;
+    using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Contexto.Contexto>
+    internal sealed class Configuration : DbMigrationsConfiguration<BPNFE.Dado.Contexto.Contexto>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Contexto.Contexto context)
+        protected override void Seed(BPNFE.Dado.Contexto.Contexto context)
         {
             //  This method will be called after migrating to the latest version.
 

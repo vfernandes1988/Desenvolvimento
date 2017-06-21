@@ -15,6 +15,7 @@ namespace BPNFE.MVC.AutoMapper
         {
             Mapper.CreateMap<Cliente, ClienteViewModel>();
             Mapper.CreateMap<Produto, ProdutoViewModel>();
+            Mapper.CreateMap<Usuario, UsuarioViewModel>();
         }
     }
 }

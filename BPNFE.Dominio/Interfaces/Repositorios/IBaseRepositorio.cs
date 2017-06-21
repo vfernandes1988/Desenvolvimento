@@ -2,10 +2,10 @@
 
 namespace BPNFE.Dominio.Interfaces.Repositorios
 {
-    public interface IRepositorioBase<TEntity> where TEntity : class
+    public interface IBaseRepositorio<TEntity> where TEntity : class
     {
         void Inserir(TEntity obj);
-        TEntity BuscarPorId(int id);
+        TEntity BuscarId(int id);
         IEnumerable<TEntity> BuscarTodos();
         void Atualizar(TEntity obj);
         void Remover(TEntity obj);

@@ -3,7 +3,7 @@ using BPNFE.Dominio.Interfaces.Repositorios;
 
 namespace BPNFE.Dado.Repositorios
 {
-    public class ClienteRepositorio : BaseRepositorio<Cliente>, IClienteBaseRepositorio
+    public class UsuarioRepositorio : BaseRepositorio<Usuario>, IUsuarioBaseRepositorio
     {
     }
 }

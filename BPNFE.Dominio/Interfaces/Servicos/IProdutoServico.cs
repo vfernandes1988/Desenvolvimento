@@ -3,7 +3,7 @@ using BPNFE.Dominio.Entidades;
 
 namespace BPNFE.Dominio.Interfaces.Servicos
 {
-    public interface IProdutoService : IServiceBase<Produto>
+    public interface IProdutoServico : IBaseServico<Produto>
     {
         IEnumerable<Produto> BuscarPorNome(string nome);
     }

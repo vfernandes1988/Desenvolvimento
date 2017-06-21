@@ -3,7 +3,7 @@ using BPNFE.Dominio.Entidades;
 
 namespace BPNFE.Dominio.Interfaces.Repositorios
 {
-    public interface IProdutoRepositorio : IRepositorioBase<Produto>
+    public interface IProdutoBaseRepositorio : IBaseRepositorio<Produto>
     {
         IEnumerable<Produto> BuscarPorNome(string nome);
     }

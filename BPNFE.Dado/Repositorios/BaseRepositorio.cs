@@ -6,7 +6,7 @@ using BPNFE.Dominio.Interfaces.Repositorios;
 
 namespace BPNFE.Dado.Repositorios
 {
-    public class BaseRepositorio<TEntity> : IDisposable, IRepositorioBase<TEntity> where TEntity : class
+    public class BaseRepositorio<TEntity> : IDisposable, IBaseRepositorio<TEntity> where TEntity : class
     {
         protected Contexto.Contexto Db = new Contexto.Contexto();
 
@@ -16,7 +16,7 @@ namespace BPNFE.Dado.Repositorios
             Db.SaveChanges();
         }
 
-        public TEntity BuscarPorId(int id)
+        public TEntity BuscarId(int id)
         {
             return Db.Set<TEntity>().Find(id);
         }
@@ -38,7 +38,7 @@ namespace BPNFE.Dado.Repositorios
             Db.SaveChanges();
         }
 
-        void IRepositorioBase<TEntity>.Dispose()
+        void IBaseRepositorio<TEntity>.Dispose()
         {
             throw new NotImplementedException();
         }

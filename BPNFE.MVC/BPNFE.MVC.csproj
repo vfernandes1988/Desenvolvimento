@@ -144,6 +144,8 @@
     <Compile Include="ViewModels\UsuarioViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BancoDadosDB.mdf" />
+    <Content Include="App_Data\BancoDadosDB_log.ldf" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\fonts\fontawesome\fontawesome-webfont.svg" />
     <Content Include="Content\css\fonts\Glyphicons PRO %28License%29.txt" />
@@ -735,9 +737,7 @@
     <Content Include="Views\Usuarios\Criar.cshtml" />
     <Content Include="Views\Shared\_LayoutInternaIndex.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />

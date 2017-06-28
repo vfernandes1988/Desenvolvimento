@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 using AutoMapper;
 using BPNFE.Dominio.Entidades;
-using BPNFE.Dominio.Interfaces.Repositorios;
 using BPNFE.MVC.ViewModels;
 using BPNFE.Dado.Repositorios;
 
@@ -22,7 +18,7 @@ namespace BPNFE.MVC.Controllers
         }
 
         // GET: Usuarios/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Detalhes(int id)
         {
             return View();
         }
@@ -50,14 +46,14 @@ namespace BPNFE.MVC.Controllers
         }
 
         // GET: Usuarios/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Editar(int id)
         {
             return View();
         }
 
         // POST: Usuarios/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Editar(int id, FormCollection collection)
         {
             try
             {
@@ -72,14 +68,14 @@ namespace BPNFE.MVC.Controllers
         }
 
         // GET: Usuarios/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Deletar(int id)
         {
             return View();
         }
 
         // POST: Usuarios/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Deletar(int id, FormCollection collection)
         {
             try
             {

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BPNFE.MVC.ViewModels.FaturamentoDiaViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutInternaIndex.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Novo Lançamento", "Criar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cheque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Credito)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Debito)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dinheiro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataCadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataLancamento)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cheque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Credito)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Debito)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dinheiro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLancamento)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Editar", new { id = item.FaturamentoId }) |
+                @Html.ActionLink("Details", "Detalhes", new { id = item.FaturamentoId }) |
+                @Html.ActionLink("Delete", "Deletar", new { id = item.FaturamentoId })
+            </td>
+        </tr>
+    }
+</table>

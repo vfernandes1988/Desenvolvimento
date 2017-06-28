@@ -2,7 +2,8 @@
 
 @{
     ViewBag.Title = "Criar Usuário";
-    Layout = "~/Views/Shared/_LayoutInterna.cshtml";
+    Layout = "~/Views/Shared/_LayoutInternaIndex" +
+             ".cshtml";
 }
 
 <h2>Criar Usuário</h2>
@@ -58,29 +59,24 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Ativo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-xs-2">
+            <div class="col-md-4">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Ativo)
                     @Html.ValidationMessageFor(model => model.Ativo, "", new { @class = "text-danger" })
                 </div>
             </div>
+        </div>
+        <div class="form-group">
             @Html.LabelFor(model => model.Administrador, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-4">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.Administrador)
-                    @Html.ValidationMessageFor(model => model.Administrador, "", new { @class = "text-danger" })
-                </div>
+            <div class="checkbox">
+                @Html.EditorFor(model => model.Administrador)
+                @Html.ValidationMessageFor(model => model.Administrador, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Criar" class="btn btn-default" />
+            <div class="col-md-4">
+                <button type="submit" value="Criar" class="btn btn-success">ENVIAR</button>
             </div>
         </div>
     </div>
 }
-
-<div>
-    @Html.ActionLink("Voltar", "Index")
-</div>

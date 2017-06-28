@@ -14,6 +14,8 @@ namespace BPNFE.Dado.Contexto
         {
         }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<FaturamentoDia> FaturamentoDias { get; set; }
+        public DbSet<Fornecedor> Fornecedores { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
@@ -34,7 +36,10 @@ namespace BPNFE.Dado.Contexto
                 .Configure(p => p.HasMaxLength(100));
 
             modelBuilder.Configurations.Add(new ClienteConfiguracao());
+            modelBuilder.Configurations.Add(new FaturamentoDiaConfiguracao());
+            modelBuilder.Configurations.Add(new FornecedorConfiguracao());
             modelBuilder.Configurations.Add(new ProdutoConfiguracao());
+            modelBuilder.Configurations.Add(new UsuarioConfiguracao());
         }
 
         public override int SaveChanges()

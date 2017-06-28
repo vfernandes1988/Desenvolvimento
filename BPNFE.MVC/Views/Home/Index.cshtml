@@ -1,32 +1,58 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
-    Layout = "~/Views/Shared/_LayoutInternas.cshtml";
+    ViewBag.Title = "Sistema BP MOTO PEÇAS";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<!-- Add class "fade-in-effect" for login form effect -->
+<form method="post" role="form" id="login" class="login-form fade-in-effect">
+    <div class="login-header">
+        <div>
+            <h1>
+                <span class="login">SISTEMA</span>
+            </h1>
+            <h3>
+                <span class="login">BPMOTO PEÇAS</span>
+            </h3>
+        </div>
+        <p>Dear user, log in to access the admin area!</p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="form-group">
+        <label class="control-label" for="username">Usuário</label>
+        <input type="text" class="form-control input-dark" name="username" id="username" autocomplete="off" />
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="form-group">
+        <label class="control-label" for="passwd">Senha</label>
+        <input type="password" class="form-control input-dark" name="passwd" id="passwd" autocomplete="off" />
     </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-dark  btn-block text-left">
+            <i class="fa-lock"></i>
+            Entrar
+        </button>
+    </div>
+    <div class="login-footer">
+        <a href="#">Esqueceu a Senha ?</a>
+    </div>
+</form>
+
+<!-- External login -->
+<div class="external-login">
+    <a href="/FaturamentoDia/" class="gplus">
+        <i class="fa-toggle-on"></i>
+        ENTRAR
+    </a>
+    
+
+    <!--
+    <a href="#" class="twitter">
+        <i class="fa-twitter"></i>
+        Login with Twitter
+    </a>
+
+    <a href="#" class="gplus">
+        <i class="fa-google-plus"></i>
+        Login with Google Plus
+    </a>
+    -->
 </div>

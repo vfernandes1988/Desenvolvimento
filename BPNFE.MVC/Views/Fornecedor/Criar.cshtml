@@ -1,0 +1,81 @@
+﻿@model BPNFE.MVC.ViewModels.FornecedorViewModel
+
+@{
+    ViewBag.Title = "Criar";
+    Layout = "~/Views/Shared/_LayoutInternaIndex.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default altura">
+                <div class="form-horizontal">
+                    <h3 class="panel-title">Cadastrar Novo Fornecedor</h3>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Nome</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Nome Fantasia</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.NomeFantasia, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.NomeFantasia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Inscrição Estadual</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Ie, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Ie, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">CNPJ</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Cnpj, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Cnpj, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">A Faturar</label>
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Faturar, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Faturar, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="col-lg-12">
+                        <div class="col-lg-3"></div>
+
+                        <div class="col-lg-3">
+                            <button type="submit" value="Create" class="btn btn-primary btn-icon btn-icon-standalone bg-lg">
+                                <i class="fa-thumbs-up"></i>
+                                <span>Salvar</span>
+                            </button>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="/Fornecedor/Index" class="btn btn-red btn-icon btn-icon-standalone">
+                                <i class="fa-long-arrow-left"></i>
+                                <span>Voltar</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3"></div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

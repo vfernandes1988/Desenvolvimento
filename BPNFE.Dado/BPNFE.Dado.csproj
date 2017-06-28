@@ -34,11 +34,15 @@
   <ItemGroup>
     <Compile Include="Contexto\Contexto.cs" />
     <Compile Include="EntidadesConfig\ClienteConfiguracao.cs" />
+    <Compile Include="EntidadesConfig\FaturamentoDiaConfiguracao.cs" />
+    <Compile Include="EntidadesConfig\FornecedorConfiguracao.cs" />
     <Compile Include="EntidadesConfig\ProdutoConfiguracao.cs" />
     <Compile Include="EntidadesConfig\UsuarioConfiguracao.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\ClienteRepositorio.cs" />
+    <Compile Include="Repositorios\FaturamentoDiaRepositorio.cs" />
+    <Compile Include="Repositorios\FornecedorRepositorio.cs" />
     <Compile Include="Repositorios\ProdutoRepositorio.cs" />
     <Compile Include="Repositorios\BaseRepositorio.cs" />
     <Compile Include="Repositorios\UsuarioRepositorio.cs" />

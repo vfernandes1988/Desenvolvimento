@@ -14,6 +14,8 @@ namespace BPNFE.MVC.AutoMapper
         protected override void Configure()
         {
             Mapper.CreateMap<Cliente, ClienteViewModel>();
+            Mapper.CreateMap<FaturamentoDia, FaturamentoDiaViewModel>();
+            Mapper.CreateMap<Fornecedor, FornecedorViewModel>();
             Mapper.CreateMap<Produto, ProdutoViewModel>();
             Mapper.CreateMap<Usuario, UsuarioViewModel>();
         }
